@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/leads.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Leads Full Stack JavaScript</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                xibiu: {
+                    blue: "#0073E6"
+                }
+              }
+            }
+          }
+        }
+      </script>
+</head>
+
+<body>
+    <header class="w-full py-2 px-8">
+        <h1 class="text-xibiu-blue flex gap-2 flex items-center font-bold text-lg">
+            <div class="w-10 h-10 bg-xibiu-blue text-white flex items-center justify-center rounded-full">
+                Xb
+            </div>
+            Xibiu Cursos
+        </h1>         
+    </header>
+
+    <section class="w-full py-8 px-8 flex justify-between">
+        <div class="flex flex-col gap-6 max-w-[30%]">
+            <div class="flex flex-col gap-2">
+                <h2 class="font-semibold text-2xl leading-tight">Você deseja dominar todas as etapas do desenvolvimento web, mas não sabe por onde começar?</h2>
+                <span class="font-semibold text-sm leading-none text-[#333]/60">Seu caminho para se tornar um desenvolvedor fullstack começa aqui.</span>
+            </div>
+            <div class="flex gap-4">
+                <button class="py-2 px-4 font-semibold text-white text-md bg-xibiu-blue rounded-3xl hover:bg-transparent hover:text-xibiu-blue transition-colors ring-1 ring-xibiu-blue">Começar teste</button>
+                <button class="py-2 px-4 font-semibold text-xibiu-blue text-md ring-1 ring-xibiu-blue rounded-3xl hover:bg-xibiu-blue hover:text-white transition-colors">Como funciona?</button>
+            </div>
+        </div>
+    </section>
+
+	<datalist id="genero">
+		<option value="feminino">
+		<option value="masculino">
+		<option value="não_informado">
+	</datalist>
+
+    <section class="flex w-full items-center justify-center py-8 bg-[#D3D3D3] drop-shadow-xl">
+        <form action="http://localhost:3000/dados" method="POST" class="flex flex-col gap-3 bg-white drop-shadow-xl max-w-[600px] px-6 py-8 rounded-2xl">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+            </div>
+            <div>
+                <label for="celular">Celular:</label>
+                <input type="text" id="celular" name="celular" required>
+            </div>
+            <div>
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" list="genero" required>
+            </div>
+            <div class="flex-row">
+                <input type="checkbox" id="lgpd" name="lgpd" required>
+                <label for="lgpd">Aceito os termos de uso e política de privacidade</label>
+            </div>
+            <button type="submit" class="ring-1 ring-xibiu-blue text-xibiu-blue rounded-xl py-1 px-3 hover:text-white hover:bg-xibiu-blue transition-colors">ENVIAR</button>
+        </form>
+    </section>
+        
+    <footer>
+        <div class="container">
+            <p>© 2023 JS Academy. Todos os direitos reservados.</p>
+            <p>CNPJ: 12.345.678/0001-90</p>
+            <p>Contato: (11) 98765-4321 | contato@jsacademy.com.br</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

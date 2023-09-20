@@ -1,0 +1,21 @@
+{
+  "name": "wc",
+  "version": "1.0.0",
+  "description": "Simulação de escritório de projetos com Leads <br> Leads - aprimoramento - Escritório <br> npm init -y <br> npm install express body-parser sqlite3 bcryptjs express-session path <br> Para subir servidor executar: <br> node server.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "path": "^0.12.7",
+    "sqlite3": "^5.1.6"
+  }
+}
